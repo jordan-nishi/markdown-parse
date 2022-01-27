@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
+
 public class MarkdownParse {
     public static ArrayList<String> getLinks(String markdown) {
         ArrayList<String> toReturn = new ArrayList<>();
@@ -20,6 +21,7 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             //toReturn.add(markdown.substring(openParen + 1, closeParen));
 
+
             if(markdown.charAt(nextOpenBracket - 1) != '!'){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
@@ -27,6 +29,7 @@ public class MarkdownParse {
         }        
         return toReturn;
     }
+
     public static void main(String[] args) throws IOException {
 		Path fileName = Path.of(args[0]);
 	    String contents = Files.readString(fileName);
