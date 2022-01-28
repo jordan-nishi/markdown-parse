@@ -17,11 +17,8 @@ public class MarkdownParseTest {
         String fileName = "test-file.md";
         List<String> expected = List.of("https://something.com", "some-page.html");
         
-        try {
         assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+      
     }
 
     @Test
