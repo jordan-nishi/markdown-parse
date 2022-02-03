@@ -1,0 +1,1 @@
+[![fake image]](https://newlink.com)
