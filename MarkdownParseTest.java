@@ -39,7 +39,7 @@ public class MarkdownParseTest {
     @Test
     public void testLinks3() {
         String fileName = "test-lab-2.md";
-        List<String> expected = List.of("<[]>");
+        List<String> expected = List.of();
         
         try {
         assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
