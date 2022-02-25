@@ -59,4 +59,78 @@ public class MarkdownParseTest {
             e.printStackTrace();
         }
     }
+
+
+
+    @Test
+    public void testSnippetOne() {
+        String fileName = "snippet1.md";
+        List<String> expected = List.of("`google.com");
+        
+        try {
+            assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+        }
+    }
+    @Test
+    public void testSnippetOneLab() {
+        String fileName = "snippet1.md";
+        List<String> expected = List.of("`google.com");
+        
+        try {
+            assertEquals(expected, MarkdownParseLab.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+
+        }
+    }
+
+    @Test
+    public void testSnippetTwo() {
+        String fileName = "snippet2.md";
+        List<String> expected = List.of("a.com, a.com(()), example.com");
+        
+        try {
+            assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+        }
+    }
+    @Test
+    public void testSnippetTwoLab() {
+        String fileName = "snippet2.md";
+        List<String> expected = List.of("a.com, a.com(()), example.com");
+        
+        try {
+            assertEquals(expected, MarkdownParseLab.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void testSnippetThree() {
+        String fileName = "snippet3.md";
+        List<String> expected = 
+        List.of("https://ucsd-cse15l-w22.github.io/");
+        
+        try {
+            assertEquals(expected, MarkdownParse.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+        }
+    }
+    @Test
+    public void testSnippetThreeLab() {
+        String fileName = "snippet3.md";
+        List<String> expected = 
+        List.of("https://ucsd-cse15l-w22.github.io/");
+        
+        try {
+            assertEquals(expected, MarkdownParseLab.getLinks(Files.readString(Path.of(fileName))));
+            } catch (IOException e) {
+                e.printStackTrace();
+        }
+    }
 }

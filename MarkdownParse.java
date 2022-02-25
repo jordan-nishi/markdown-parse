@@ -46,6 +46,7 @@ public class MarkdownParse {
             }
 
             if (!isImage) toReturn.add(markdown.substring(openParen + 1, closeParen));
+            
             if (closeParen > currentIndex){
                 currentIndex = closeParen + 1;
             }else {
