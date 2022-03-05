@@ -74,7 +74,7 @@ public class MarkdownParseTest {
         }
     }
     @Test
-    public void testSnippetOneLab() {
+    public void testSnippetOneJose() {
         String fileName = "snippet1.md";
         List<String> expected = List.of("`google.com");
         
@@ -98,7 +98,7 @@ public class MarkdownParseTest {
         }
     }
     @Test
-    public void testSnippetTwoLab() {
+    public void testSnippetTwoJose() {
         String fileName = "snippet2.md";
         List<String> expected = List.of("a.com, a.com(()), example.com");
         
@@ -122,7 +122,7 @@ public class MarkdownParseTest {
         }
     }
     @Test
-    public void testSnippetThreeLab() {
+    public void testSnippetThreeJose() {
         String fileName = "snippet3.md";
         List<String> expected = 
         List.of("https://ucsd-cse15l-w22.github.io/");
